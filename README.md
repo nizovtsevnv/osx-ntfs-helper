@@ -24,7 +24,7 @@
 2. Install [Homebrew](https://brew.sh/): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 3. Add FUSE homebrew repo: `brew tap gromgit/homebrew-fuse`
 4. Install fresh version of [MacFUSE](https://github.com/osxfuse/osxfuse/wiki) adapter and [NTFS-3G](https://github.com/osxfuse/osxfuse/wiki/NTFS-3G) driver: `brew install macfuse ntfs-3g-mac`
-5. Add helper script (`mount-all-ntfs`) to your preferable location (for example `~/.bin`) and check this location is in `PATH` environment variable
+5. Add helper script ([mount-all-ntfs](https://github.com/nizovtsevnv/osx-ntfs-helper/raw/main/mount-all-ntfs)) from this repository to your preferable location (for example `~/.bin`) and check this location is in `PATH` environment variable
 
 ## Usage example
 
@@ -36,7 +36,7 @@ Volume MyNtfsDrive on disk2s1 mounted in writeable mode
 
 ## License
 
-Distributed under the MIT license. See ``LICENSE`` for more information.
+Distributed under the MIT license. See [LICENSE](https://github.com/nizovtsevnv/osx-ntfs-helper/raw/main/LICENSE) for more information.
 
 ## Support
 
