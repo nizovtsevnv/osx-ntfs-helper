@@ -1,0 +1,11 @@
+#!/bin/bash
+
+LIST=$(diskutil list)
+for PARTITION in $(echo $LIST | grep -E "Windows_NTFS" | sed 's/.*\(disk.*\)/\1/')
+do
+    LABEL=$(echo $LIST | grep $PARTITION | sed 's/.*Windows_NTFS[ ]*\([^ ]*\).*/\1/')
+    diskutil umount $LABEL
+    sudo mkdir /Volumes/$LABEL
+    sudo /usr/local/sbin/mount_ntfs /dev/$PARTITION /Volumes/$LABEL
+    echo "Volume $LABEL on $PARTITION mounted in writeable mode"
+done
